@@ -116,7 +116,7 @@ input[type="search"] {
 .sprite{
   background: url("./../images/sprite_main.png") no-repeat;
   height: 3.75rem;
-  padding-left: 4rem;
+  padding-left: 4rem; /*64/4*/
 }
 
 .spriteBook{
