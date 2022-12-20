@@ -28,7 +28,67 @@ img {
   height: auto;
 }
 
-video {
+video{
   width: 100%;
   height: auto;
 }
+
+/* 반응형 Iframe 가로가 100%일때 세로는 56.25% 9/16=56.25%. 16:9 비율을 가지는 비디오라 이렇게 계산함*/
+.news__videoContainer{
+  width: auto;
+}
+
+.iframeWrapper{
+  width: 100%;
+  height: 0 !important;
+  position: relative;
+}
+
+/* 비율대로 클래스만 바꿔넣으면 되게끔 비율별 클래스 모듈화 */
+.iframeRatio-16-9{
+  padding-top: 56.25%;
+}
+.iframeRatio-21-9{
+  padding-top: 42.857142857142855%;
+}
+.iframeRatio-4-3{
+  padding-top: 75%;
+}
+.iframeRatio-1-1{
+  padding-top: 100%;
+}
+
+.iframeWrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/*익스11 지원하진않지만 안해도되는 환경에 쓸수있는 대체 css*/
+/* .iframeWrapper{
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.iframeWrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+.iframeRatio-21-9{
+  aspect-ratio: 21/9;
+}
+.iframeRatio-4-3{
+  aspect-ratio: 4/3;
+}
+.iframeRatio-1-1{
+  aspect-ratio: 1/1;
+} */

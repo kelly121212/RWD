@@ -5,6 +5,12 @@
 @import url(./base.css);
 
 /* 모든 디바이스 (All Device) */
+
+/* 공통 아이콘 (Font Awesome) */
+.far, .fas {
+  margin-right: var(--spacing-xs);
+}
+
 /* 공통 헤더 */
 .appHeader {
   position: relative;
@@ -168,7 +174,6 @@ input[type="search"] {
   margin-left: auto;
   margin-right: auto;
   /*가운데 정렬로 flex를 주면 아래 요소들이 다 적용되어 margin-left right로 해결*/
-  background-color: yellow;
   text-align: center;
   /* display: flex; */
   /* flex-flow: column nowrap;
@@ -182,7 +187,6 @@ input[type="search"] {
 }
 
 .book__info{
-  background: pink;
   text-align: center;
   margin-top: var(--spacing-base);
 }
@@ -198,14 +202,54 @@ input[type="search"] {
 
 /* 공통 새소식 */
 .news {
-  /* background: yellow; */
   grid-area: news;
+}
+
+.news__date{
+  display: block;
+  margin-top: var(--spacing-base);
+  text-align: right;
 }
 
 /* 공통 게시판 */
 .board {
-  /* background: lightsalmon; */
   grid-area: board;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.board__title{
+  flex: 1 1 auto;/*0 1 auto 기본값*/
+}
+
+.board__list{
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-sm);
+}
+
+.board__item{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.board__link{
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.board__date{
+  flex: 0 0 auto;
+  
+}
+
+.board__more{
+  padding-top: var(--spacing-sm);
 }
 
 /* 공통 인기 사이트 */
@@ -395,7 +439,6 @@ input[type="search"] {
 
   /* 데스크탑 메인 콘텐츠 */
   .appMain {
-    border: 5px solid red;
     width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
