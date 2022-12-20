@@ -216,6 +216,7 @@ input[type="search"] {
   grid-area: board;
   display: flex;
   flex-flow: row wrap;
+  overflow: hidden;
 }
 
 .board__title{
@@ -228,6 +229,7 @@ input[type="search"] {
   display: flex;
   flex-flow: column nowrap;
   gap: var(--spacing-sm);
+  width: 100%;
 }
 
 .board__item{
@@ -237,15 +239,18 @@ input[type="search"] {
 
 .board__link{
   flex: 1 1 auto;
+  background-color: pink;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+  width: calc(100% - 6.25em);
 }
 
 .board__date{
   flex: 0 0 auto;
-  
+  background-color: skyblue;
+  width: 6.25em;
+  text-align: right;
 }
 
 .board__more{
